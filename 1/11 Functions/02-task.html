@@ -12,7 +12,27 @@
         Если параметр отсутсвует - не используйте значение для расчета среднего арифметического значения.
     </pre>
     <script>
-        
+        function avg(a, b, c) {
+
+            if (a === undefined ) {
+                let sumQ = (b + c) / arguments.length;
+                return sumQ;
+            } else if (b === undefined ) {
+                let sumQ = (a + c) / arguments.length;
+                return sumQ;
+            } else if (c === undefined ) {
+                let sumQ = (a + b) / arguments.length;
+                return sumQ;
+            } else if ( b === undefined && c === undefined) {
+                return a;
+            } else {
+                let sumQ = (a + b + c) / arguments.length;
+                return sumQ;
+            }
+        }
+
+        let x = avg(2);
+        console.log(x);
     </script>
 </body>
 </html>
