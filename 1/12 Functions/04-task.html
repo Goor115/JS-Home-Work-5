@@ -18,7 +18,7 @@
         let evenValues = [];
         let oddValuesPosition = 0;
         let evenValuesPosition = 0;
-
+/*
         for (let value of values) {
             if (value % 2 == 0) {
                 evenValues[evenValuesPosition] = value;
@@ -29,6 +29,17 @@
                 oddValuesPosition++;
             }
         }
+*/
+        values.forEach(function (elem) {
+            if (elem % 2 == 0) {
+                evenValues[evenValuesPosition] = elem;
+                evenValuesPosition++;
+            } else {
+                oddValues[oddValuesPosition] = elem;
+                oddValuesPosition++;
+            }
+            }
+        )
 
         console.log("Нечетные значения");
         for (let oddVal of oddValues) {
