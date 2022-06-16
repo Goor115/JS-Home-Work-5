@@ -11,7 +11,19 @@
         Запросите у пользователя чилсо. Выведите все числа в обрантом поряке от введенного пользователем значения до 1. Используйте для решения рекурсию.
     </pre>
     <script>
-        
+        let value = prompt("Введите число");
+        number(value);
+
+        function number(value) {
+            console.log(value);
+            if (value == 1)
+                return 1;
+            else {
+                value--;
+                number(value);
+            }
+
+        }
     </script>
 </body>
 </html>

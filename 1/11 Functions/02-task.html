@@ -14,24 +14,24 @@
     <script>
         function avg(a, b, c) {
 
-            if (a === undefined ) {
+            if ((a === undefined && b === undefined && c === undefined) || (b === undefined && c === undefined ) ||(a === undefined && c === undefined) || (a === undefined && b === undefined )) {
+                return "Потрібно мінімум 2 числа";
+            } else if (c === undefined ) {
+                let sumQ = (a + b) / arguments.length;
+                return sumQ;
+            } else if (a === undefined ) {
                 let sumQ = (b + c) / arguments.length;
                 return sumQ;
             } else if (b === undefined ) {
                 let sumQ = (a + c) / arguments.length;
                 return sumQ;
-            } else if (c === undefined ) {
-                let sumQ = (a + b) / arguments.length;
-                return sumQ;
-            } else if ( b === undefined && c === undefined) {
-                return a;
             } else {
                 let sumQ = (a + b + c) / arguments.length;
                 return sumQ;
             }
         }
 
-        let x = avg(2);
+        let x = avg(1,1);
         console.log(x);
     </script>
 </body>

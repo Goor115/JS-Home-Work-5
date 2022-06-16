@@ -30,6 +30,8 @@
             }
         }
 */
+
+        /*
         values.forEach(function (elem) {
             if (elem % 2 == 0) {
                 evenValues[evenValuesPosition] = elem;
@@ -38,6 +40,17 @@
                 oddValues[oddValuesPosition] = elem;
                 oddValuesPosition++;
             }
+            }
+        )
+*/
+        values.filter(function (value) {
+                if (value % 2 == 0) {
+                    evenValues[evenValuesPosition] = value;
+                    evenValuesPosition++;
+                } else {
+                    oddValues[oddValuesPosition] = value;
+                    oddValuesPosition++;
+                }
             }
         )
 
