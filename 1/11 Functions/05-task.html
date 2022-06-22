@@ -11,7 +11,23 @@
         Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
     </pre>
     <script>
+        let values = [36, 25, 46, 15, 18]
 
+        function dubl(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+                for (let j = 0; j < i; j++) {
+                    const element2 = arr[j];
+                    if (element === element2) {
+                        result.push(element2);
+                    }
+                }
+            }
+            return result.length != 0 ? result : null;
+        }
+
+        console.log(dubl(values));
     </script>
 </body>
 </html>
